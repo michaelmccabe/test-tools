@@ -40,11 +40,13 @@
             font-size: 3em;
             margin-bottom: 10px;
             font-weight: 700;
+            word-wrap: break-word;
         }
         
         header .subtitle {
             font-size: 1.3em;
             opacity: 0.9;
+            word-wrap: break-word;
         }
         
         .intro {
@@ -56,12 +58,14 @@
         .intro h2 {
             color: #667eea;
             margin-bottom: 15px;
+            word-wrap: break-word;
         }
         
         .intro p {
             font-size: 1.1em;
             color: #555;
             margin-bottom: 10px;
+            word-wrap: break-word;
         }
         
         .tools {
@@ -87,11 +91,13 @@
         .tool-icon {
             font-size: 3em;
             margin-right: 15px;
+            flex-shrink: 0;
         }
         
         .tool h2 {
             font-size: 2.2em;
             color: #667eea;
+            word-wrap: break-word;
         }
         
         .tool .language {
@@ -107,6 +113,7 @@
         .tool p {
             margin: 15px 0;
             color: #555;
+            word-wrap: break-word;
         }
         
         .features {
@@ -117,6 +124,7 @@
             color: #333;
             margin-bottom: 12px;
             font-size: 1.2em;
+            word-wrap: break-word;
         }
         
         .features ul {
@@ -129,6 +137,7 @@
             padding-left: 25px;
             position: relative;
             color: #555;
+            word-wrap: break-word;
         }
         
         .features li:before {
@@ -149,6 +158,7 @@
         .quick-start h3 {
             color: #333;
             margin-bottom: 12px;
+            word-wrap: break-word;
         }
         
         pre {
@@ -159,10 +169,13 @@
             overflow-x: auto;
             font-size: 0.9em;
             margin: 10px 0;
+            white-space: pre-wrap;
+            word-wrap: break-word;
         }
         
         code {
             font-family: 'Courier New', Courier, monospace;
+            word-wrap: break-word;
         }
         
         .use-case {
@@ -176,6 +189,11 @@
         .use-case h3 {
             color: #667eea;
             margin-bottom: 10px;
+            word-wrap: break-word;
+        }
+        
+        .use-case p {
+            word-wrap: break-word;
         }
         
         .cta {
@@ -188,6 +206,11 @@
         .cta h2 {
             font-size: 2em;
             margin-bottom: 20px;
+            word-wrap: break-word;
+        }
+        
+        .cta p {
+            word-wrap: break-word;
         }
         
         .cta-buttons {
@@ -232,6 +255,10 @@
         }
         
         @media (max-width: 768px) {
+            body {
+                padding: 10px;
+            }
+            
             .tools {
                 grid-template-columns: 1fr;
             }
@@ -241,13 +268,83 @@
                 border-bottom: 2px solid #e9ecef;
             }
             
+            header {
+                padding: 30px 20px;
+            }
+            
             header h1 {
+                font-size: 1.8em;
+            }
+            
+            header .subtitle {
+                font-size: 1em;
+            }
+            
+            .intro {
+                padding: 20px;
+            }
+            
+            .intro h2 {
+                font-size: 1.3em;
+            }
+            
+            .intro p {
+                font-size: 1em;
+            }
+            
+            .tool {
+                padding: 20px;
+            }
+            
+            .tool-icon {
                 font-size: 2em;
+                margin-right: 10px;
+            }
+            
+            .tool h2 {
+                font-size: 1.5em;
+            }
+            
+            .quick-start {
+                padding: 15px;
+            }
+            
+            pre {
+                padding: 10px;
+                font-size: 0.8em;
+            }
+            
+            .use-case {
+                padding: 15px;
+            }
+            
+            .cta {
+                padding: 30px 20px;
+            }
+            
+            .cta h2 {
+                font-size: 1.5em;
+            }
+            
+            .cta p {
+                font-size: 0.95em;
             }
             
             .cta-buttons {
                 flex-direction: column;
                 align-items: center;
+            }
+            
+            .btn {
+                padding: 12px 25px;
+                font-size: 0.9em;
+                width: 100%;
+                max-width: 300px;
+            }
+            
+            footer {
+                padding: 20px 15px;
+                font-size: 0.9em;
             }
         }
     </style>
@@ -338,7 +435,7 @@ ramjam run ./tests/integration/</code></pre>
                 
                 <div class="quick-start">
                     <h3>Quick Start</h3>
-                    <pre><code># Build
+                    <pre><code# Build
 cargo build --release
 
 # Run
